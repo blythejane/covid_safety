@@ -1,115 +1,119 @@
-﻿case,day,pcr_flag,antigen_flag,ct,pcr,antigen,molecular
-A,0,1,NA,NA,Positive,,Missing
-A,1,1,0,12,Positive,Negative,Missing
-B,-2,0,NA,NA,Negative,,Missing
-B,-1,0,NA,NA,Missing,,Negative
-B,0,1,0,27,Positive,Negative,Positive
-B,1,1,0,17,Positive,Negative,Missing
-B,2,1,0,17,Positive,Negative,Missing
-B,3,1,0,17,Positive,Negative,Missing
-B,4,1,1,15,Positive,Positive,Missing
-B,5,1,1,28,Positive,Positive,Missing
-B,6,1,1,24,Positive,Positive,Missing
-B,7,1,1,26,Positive,Positive,Missing
-B,8,1,1,26,Positive,Positive,Missing
-B,9,1,0,27,Positive,Negative,Missing
-C,0,1,NA,26,Positive,,Missing
-C,1,1,0,18,Positive,Negative,Missing
-C,2,1,0,20,Positive,Negative,Missing
-C,3,1,1,28,Positive,Positive,Missing
-C,4,1,NA,24,Positive,,Missing
-C,5,1,NA,22,Positive,,Missing
-C,6,1,NA,24,Positive,,Missing
-C,7,1,NA,25,Positive,,Missing
-C,8,1,NA,19,Positive,,Missing
-C,9,1,NA,31,Positive,,Missing
-C,10,1,1,31,Positive,Positive,Missing
-D,-1,0,0,NA,Missing,Negative,Missing
-D,0,1,0,20,Positive,Negative,Missing
-E,-1,0,0,NA,Missing,Negative,Missing
-E,0,1,0,20,Positive,Negative,Missing
-F,-1,0,NA,NA,Missing,,Negative
-F,0,0,0,NA,Missing,Negative,Positive
-F,1,1,0,21,Positive,Negative,Missing
-F,2,0,1,NA,Missing,Positive,Missing
-F,4,1,1,22,Positive,Positive,Missing
-F,5,0,1,NA,Negative,Positive,Missing
-F,6,1,1,35,Inconclusive,Positive,Missing
-F,8,0,0,NA,Missing,Negative,Positive
-G,-1,0,NA,NA,Missing,,Negative
-G,0,0,NA,NA,Missing,,Positive
-G,2,1,0,21,Positive,Negative,Positive`
-H,0,1,NA,25,Positive,,Missing
-H,1,1,0,21,Positive,Negative,Missing
-H,2,1,0,21,Positive,Negative,Missing
-H,3,1,1,30,Positive,Positive,Missing
-H,4,1,NA,25,Positive,,Missing
-H,5,1,NA,28,Positive,,Missing
-H,6,1,NA,20,Positive,,Missing
-H,7,1,NA,23,Positive,,Missing
-H,8,1,NA,27,Positive,,Missing
-H,9,0,NA,35,Negative,,Missing
-H,10,0,0,NA,Negative,Negative,Missing
-I,0,1,0,21,Positive,Negative,Missing
-J,-3,0,0,NA,Negative,Negative,Missing
-J,0,1,0,22,Positive,Negative,Positive``
-J,1,1,NA,19,Positive,,Missing
-J,2,1,1,22,Positive,Positive,Missing
-J,NA,0,0,NA,Missing,Negative,Missing
-K,0,1,0,22,Positive,Negative,Missing
-K,2,1,1,23,Positive,Positive,Positive
-L,-3,0,NA,NA,Negative,,Missing
-L,0,1,0,23,Positive,Negative,Missing
-L,4,0,NA,NA,Negative,,Missing
-M,0,1,0,23,Positive,Negative,Missing
-N,-1,1,0,NA,Missing,Negative,Missing
-N,0,1,0,23,Positive,Negative,Missing
-N,1,1,NA,22,Positive,,Positive
-O,0,1,0,23,Positive,Negative,Missing
-P,0,1,0,24,Positive,Negative,Missing
-P,1,1,0,28,Positive,Negative,Missing
-P,2,1,0,29,Positive,Negative,Missing
-P,2.5,1,0,30,Positive,Negative,Missing
-P,3,1,1,24,Positive,Positive,Missing
-P,4,1,NA,20,Positive,,Missing
-P,5,1,NA,23,Positive,,Missing
-P,6,1,NA,14,Positive,,Missing
-P,6.5,1,NA,21,Positive,,Missing
-P,8,1,NA,30,Inconclusive,,Missing
-Q,-1,0,NA,NA,Negative,,Missing
-Q,0,1,NA,32,Inconclusive,,Missing
-Q,1,1,0,26,Positive,Negative,Missing
-Q,2,1,0,24,Positive,Negative,Missing
-Q,3,1,1,32,Inconclusive,Positive,Missing
-Q,4,1,1,35,Inconclusive,Positive,Missing
-Q,5,1,NA,34,Inconclusive,,Missing
-R,-1,0,0,NA,Missing,Negative,Missing
-R,0,1,0,24,Positive,Negative,Missing
-R,1,1,NA,24,Positive,,Positive
-S,0,1,0,25,Positive,Negative,Missing
-S,1,1,0,NA,Positive,Negative,Missing
-S,2,1,1,NA,Positive,Positive,Missing
-S,3,1,1,NA,Positive,Positive,Missing
-T,-2,0,NA,NA,Negative,,Missing
-T,0,1,0,25,Positive,Negative,Missing
-T,1,1,NA,32,Inconclusive,,Missing
-T,2,1,NA,33,Inconclusive,,Missing
-T,3,1,NA,28,Positive,,Missing
-U,-1,0,0,NA,Missing,Negative,Missing
-U,0,1,0,25,Positive,Negative,Missing
-U,1,1,NA,23,Positive,,Positive
-V,0,1,0,25,Positive,Negative,Missing
-W,0,1,0,25,Positive,Negative,Positive
-X,0,1,0,28,Positive,Negative,Missing
-Y,0,1,0,28,Positive,Negative,Missing
-Y,1,1,NA,32,Positive,,Missing
-Z,0,1,0,28,Positive,Negative,Missing
-AA,0,1,0,30,Positive,Negative,Missing
-BB,0,1,NA,35,Inconclusive,,Missing
-BB,2,1,0,33,Inconclusive,Negative,Missing
-BB,2,1,0,30,Positive,Negative,Missing
-CC,-1,0,0,NA,Missing,Negative,Missing
-CC,0,1,0,34,Positive,Negative,Missing
-DD,-2,0,NA,NA,Negative,,Missing
-DD,-1,0,NA,NA,Missing,,Negative
-DD,0,1,0,NA,Inconclusive,Negative,Positive`
+﻿case,day,concordance,infectious,flag_high_risk,ct_saliva,ct_nasal,pcr,antigen,manufacturer_ag,molecular,manufacturer_molecular
+A,0,,,,,,Positive,,,,
+A,1,FALSE,TRUE,TRUE,12,,Positive,Negative,Quidel QuickVue,,
+B,-2,,FALSE,,,,Negative,,,,
+B,-1,,,,,,,,,Negative,Lucira Check-It
+B,0,FALSE,TRUE,TRUE,27,,Positive,Negative,Abbott BinaxNOW,Positive,Cue COVID-19
+B,1,FALSE,TRUE,TRUE,17,,Positive,Negative,Quidel QuickVue,,
+B,2,FALSE,TRUE,TRUE,17,,Positive,Negative,Quidel QuickVue,,
+B,3,FALSE,TRUE,TRUE,17,,Positive,Negative,Quidel QuickVue,,
+B,4,TRUE,TRUE,FALSE,15,,Positive,Positive,Quidel QuickVue,,
+B,5,TRUE,TRUE,FALSE,28,,Positive,Positive,Quidel QuickVue,,
+B,6,TRUE,TRUE,FALSE,24,,Positive,Positive,Quidel QuickVue,,
+B,7,TRUE,TRUE,FALSE,26,,Positive,Positive,Quidel QuickVue,,
+B,8,TRUE,TRUE,FALSE,26,,Positive,Positive,Quidel QuickVue,,
+B,9,FALSE,TRUE,TRUE,27,,Positive,Negative,Quidel QuickVue,,
+C,0,,TRUE,,26,,Positive,,,,
+C,1,FALSE,TRUE,TRUE,18,32,Positive,Negative,Abbott BinaxNOW,,
+C,2,FALSE,TRUE,TRUE,20,31,Positive,Negative,Abbott BinaxNOW,,
+C,3,TRUE,TRUE,FALSE,28,27,Positive,Positive,Abbott BinaxNOW,,
+C,4,TRUE,TRUE,,24,23,Positive,,,,
+C,5,TRUE,TRUE,,22,18,Positive,,,,
+C,6,TRUE,TRUE,,24,16,Positive,,,,
+C,7,TRUE,TRUE,,25,24,Positive,,,,
+C,8,TRUE,TRUE,,19,20,Positive,,,,
+C,9,TRUE,TRUE,,31,28,Positive,,,,
+C,10,TRUE,FALSE,FALSE,31,27,Positive,Positive,Abbott BinaxNOW,,
+D,-1,,,,,,,Negative,Quidel QuickVue,,
+D,0,FALSE,TRUE,TRUE,20,,Positive,Negative,Quidel QuickVue,,
+E*,-1,,,,,,,Negative,Quidel QuickVue,,
+E*,0,FALSE,TRUE,TRUE,20,,Positive,Negative,Quidel QuickVue,,
+F,-1,,FALSE,,,,,,,Negative,Lucira Check-It
+F,0,,,,,,,Negative,Quidel QuickVue,Positive,Lucira Check-It
+F,1,FALSE,TRUE,TRUE,21,,Positive,Negative,Quidel QuickVue,,
+F,2,,TRUE,,,,,Positive,Quidel QuickVue,,
+F,4,TRUE,TRUE,FALSE,22,,Positive,Positive,Quidel QuickVue,,
+F,5,FALSE,FALSE,FALSE,,,Negative,Positive,Quidel QuickVue,,
+F,6,TRUE,FALSE,FALSE,35,,Positive,Positive,Quidel QuickVue,,
+F,8,,,,,,,Negative,Quidel QuickVue,Positive,Lucira Check-It
+G,-1,,FALSE,,,,,,,Negative,Lucira Check-It
+G,0,,,,,,,,,Positive,Lucira Check-It
+G,2,FALSE,TRUE,TRUE,21,,Positive,Negative,Abbott BinaxNOW,Positive,Cue COVID-19
+H*,0,,TRUE,,25,,Positive,,,,
+H*,1,FALSE,TRUE,TRUE,21,34,Positive,Negative,Abbott BinaxNOW,,
+H*,2,FALSE,TRUE,TRUE,21,29,Positive,Negative,Abbott BinaxNOW,,
+H*,3,TRUE,FALSE,FALSE,30,23,Positive,Positive,Abbott BinaxNOW,,
+H*,4,,TRUE,,25,13,Positive,,,,
+H*,5,,TRUE,,28,15,Positive,,,,
+H*,6,,TRUE,,20,20,Positive,,,,
+H*,7,,TRUE,,23,25,Positive,,,,
+H*,8,,TRUE,,27,29,Positive,,,,
+H*,9,,FALSE,,35,31,Negative,,,,
+H*,10,TRUE,FALSE,FALSE,,34,Negative,Negative,Abbott BinaxNOW,,
+I,0,FALSE,TRUE,TRUE,21,,Positive,Negative,Quidel QuickVue,,
+J,-3,TRUE,FALSE,FALSE,,,Negative,Negative,Quidel QuickVue,,
+J,0,FALSE,TRUE,TRUE,22,,Positive,Negative,Quidel QuickVue,Positive,Abbott ID NOW
+J,1,,TRUE,,19,,Positive,,,,
+J,2,TRUE,TRUE,FALSE,22,,Positive,Positive,Quidel QuickVue,,
+K,-1,,,,,,,Negative,Quidel QuickVue,,
+K,0,FALSE,TRUE,TRUE,22,,Positive,Negative,Quidel QuickVue,,
+K,2,TRUE,TRUE,FALSE,23,,Positive,Positive,Abbott BinaxNOW,Positive,Lucira Check-It
+L,-3,,FALSE,,,,Negative,,,,
+L,0,FALSE,TRUE,TRUE,23,,Positive,Negative,Quidel QuickVue,,
+L,4,,FALSE,,,,Negative,,,,
+M,0,FALSE,TRUE,TRUE,23,,Positive,Negative,Quidel QuickVue,,
+N*,-1,,,,,,,Negative,Quidel QuickVue,,
+N*,0,FALSE,TRUE,TRUE,23,,Positive,Negative,Quidel QuickVue,,
+N*,1,,TRUE,,22,,Positive,,,Positive,Lucira Check-It
+O,0,FALSE,TRUE,TRUE,23,,Positive,Negative,Quidel QuickVue,,
+P,0,FALSE,TRUE,TRUE,24,,Positive,Negative,Abbott BinaxNOW,,
+P,1,FALSE,TRUE,TRUE,28,29,Positive,Negative,Abbott BinaxNOW,,
+P,2,FALSE,FALSE,TRUE,29,28,Positive,Negative,Abbott BinaxNOW,,
+P,2.5,FALSE,FALSE,TRUE,30,25,Positive,Negative,Abbott BinaxNOW,,
+P,3,TRUE,TRUE,FALSE,24,22,Positive,Positive,Abbott BinaxNOW,,
+P,4,,TRUE,,20,26,Positive,,,,
+P,5,,TRUE,,23,15,Positive,,,,
+P,6,,TRUE,,14,15,Positive,,,,
+P,6.5,,TRUE,,21,18,Positive,,,,
+P,8,,FALSE,,30,,Positive,,,,
+Q,-1,,FALSE,,,,Negative,,,,
+Q,0,,FALSE,,32,,Positive,,,,
+Q,1,FALSE,TRUE,TRUE,26,36,Positive,Negative,Quidel QuickVue,,
+Q,2,FALSE,TRUE,TRUE,24,35,Positive,Negative,Quidel QuickVue,,
+Q,3,TRUE,FALSE,FALSE,32,20,Positive,Positive,Quidel QuickVue,,
+Q,4,TRUE,FALSE,FALSE,35,24,Positive,Positive,Quidel QuickVue,,
+Q,5,,FALSE,,34,25,Positive,,,,
+R,-1,,,,,,,Negative,Quidel QuickVue,,
+R,0,FALSE,TRUE,TRUE,24,,Positive,Negative,Quidel QuickVue,,
+R,1,,TRUE,,24,,Positive,,,Positive,Lucira Check-It
+S,0,,,,,,,Negative,Abbott BinaxNOW,,
+S,1,FALSE,TRUE,TRUE,25,,Positive,Negative,Abbott BinaxNOW,,
+S,2,FALSE,TRUE,TRUE,24,25,Positive,Negative,Abbott BinaxNOW,,
+S,3,TRUE,FALSE,FALSE,33,19,Positive,Positive,Abbott BinaxNOW,,
+S,4,TRUE,FALSE,FALSE,29,25,Positive,Positive,Abbott BinaxNOW,,
+S,5,TRUE,FALSE,FALSE,32,20,Positive,Positive,Abbott BinaxNOW,,
+S,6,TRUE,FALSE,FALSE,31,20,Positive,Positive,Abbott BinaxNOW,,
+S,7,TRUE,FALSE,FALSE,33,16,Positive,Positive,Abbott BinaxNOW,,
+T,-2,,,,,,Negative,,,,
+T,0,FALSE,TRUE,TRUE,25,,Positive,Negative,Quidel QuickVue,,
+T,1,,FALSE,,32,,Positive,,,,
+T,2,,FALSE,,33,,Positive,,,,
+T,3,,TRUE,,28,,Positive,,,,
+U,-1,,,,,,,Negative,Quidel QuickVue,,
+U,0,FALSE,TRUE,TRUE,25,,Positive,Negative,Quidel QuickVue,,
+U,1,,TRUE,,23,,Positive,,,Positive,Lucira Check-It
+V,0,FALSE,TRUE,TRUE,25,,Positive,Negative,Quidel QuickVue,,
+W,0,FALSE,TRUE,TRUE,25,,Positive,Negative,Abbott BinaxNOW,Positive,BioReference Laboratory
+X*,0,FALSE,TRUE,TRUE,28,,Positive,Negative,Quidel QuickVue,,
+Y,0,FALSE,TRUE,TRUE,28,,Positive,Negative,Quidel QuickVue,,
+Y,1,,FALSE,,32,,Positive,,,,
+Z,0,FALSE,TRUE,TRUE,28,,Positive,Negative,Quidel QuickVue,,
+AA,0,FALSE,FALSE,FALSE,30,,Positive,Negative,Quidel QuickVue,,
+BB,0,,FALSE,,35,,Positive,,,,
+BB,2,FALSE,FALSE,FALSE,33,,Positive,Negative,Quidel QuickVue,,
+BB,2,FALSE,FALSE,FALSE,30,,Positive,Negative,Quidel QuickVue,,
+CC,-1,,TRUE,,,,,Negative,,,
+CC,0,FALSE,FALSE,FALSE,34,,Positive,Negative,,,
+DD,-2,,FALSE,,,,Negative,,,,
+DD,-1,,FALSE,,,,,,,Negative,Lucira Check-It
+DD,0,FALSE,TRUE,TRUE,,,Positive,Negative,Abbott BinaxNOW,Positive,Cue COVID-19
