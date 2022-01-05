@@ -1,0 +1,150 @@
+---
+title: "Covid-19 Acute Infection Test Performance"
+author: "Blythe Adamson"
+date: "12/31/2021"
+output: html_document
+---
+
+__Date generated:__ `r format(Sys.time(), '%B %d, %Y')` 
+
+__Author:__ Blythe Adamson
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning    = FALSE, 
+                      message    = FALSE,
+                      echo       = FALSE)
+library(dplyr)
+library(ggplot2)
+library(xtable)
+library(lubridate)
+library(readr)
+library(survival)
+library(survminer)
+```
+
+```{r}
+discordant_data <- read_csv("discordant_data.csv") 
+```
+
+## Viral Load Dynamics
+
+The primary outcome of interest was concordance between PCR and rapid antigen test results, dependent on time and Ct values corresponding to infectiousness. 
+
+```{r}
+n_high_risk_day01 <- discordant_data %>% 
+  filter(day == 0 | day == 1) %>% 
+  group_by(flag_high_risk) %>% 
+  summarise(n = n())
+```
+
+**Figure 1A.** Discordance in PCR and Antigen Rapid Test Results
+```{r}
+
+ag_discordant <- discordant_data %>% 
+  filter(antigen == "Negative")
+
+ag_concordant <- discordant_data %>% 
+  filter(antigen == "Positive")
+
+ag_missing <- discordant_data %>% 
+  filter(is.na(antigen))
+
+ggplot(discordant_data, aes(day, ct_saliva)) +
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = 29, ymax = Inf, 
+           fill = "black", alpha = .1, color = NA) +
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = 35, ymax = Inf, 
+           fill = "black", alpha = .5, color = NA) +
+  geom_line(aes(group = case), 
+            alpha = .8,
+            size = .6,
+            color = "grey55",
+            width = 0.2) +
+  geom_point(data = ag_missing, aes(day, ct_saliva, 
+                                    color = "Not Performed"), 
+            alpha = .8,
+            size = 1.5, 
+            width = 0.2) +
+  geom_jitter(data = ag_concordant, aes(day, ct_saliva, 
+                                        color = "True Positive", 
+                                        shape = manufacturer_ag), 
+             size = 4,
+             alpha = .8,
+             width = 0.15,
+             height = 0.2) +
+  geom_jitter(data = ag_discordant, aes(day, ct_saliva, 
+                                        color = "False Negative",
+                                        shape = manufacturer_ag), 
+             size = 4, 
+             alpha = .8,
+             width = 0.15,
+             height = 0.2) +
+  scale_x_continuous(breaks = c(0, 2, 4, 6, 8, 10),
+                     limits = c(0, 10)) +
+  xlab("Days from first positive test") +
+  ylab("Saliva SARS-CoV-2 PCR Ct") +
+  scale_y_reverse() +
+  scale_color_manual(values = c("False Negative" = "orangered3", 
+                                "True Positive" = "royalblue",
+                                "Not Performed" = "grey55"),
+                     name = "Antigen Test") +
+  ylim(38,10) +
+  scale_shape_manual(values=c(15, 17), name = "Manufacturer") +
+  annotate("text", x = 9.5, y = 23.5, label = "Infectious") + 
+  annotate("text", x = 9.5, y = 25, label = "Viral Load") + 
+  annotate("text", x = 9.2, y = 33, label = "Not  Infectious") + 
+  annotate("text", x = 9, y = 37, label = "PCR Negative", color = "white") + 
+  theme_bw() +
+  theme(axis.title.x = element_text(size = 14),
+        axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title.y = element_text(size = 14))
+```
+
+## Kaplan Meier Analysis
+
+A Kaplan Meier analysis was performed to estimate the median time from PCR positive to rapid antigen positive and time-dependent probability of a false negative rapid antigen test. We defined the index as the specimen collection date for the first PCR test with detectable SARS-CoV-2 with Ct <35, the event being the first positive rapid antigen test result, and censoring at the most recent antigen test date.
+
+```{r}
+tte <- discordant_data %>% 
+  filter(antigen == "Positive") %>%
+  group_by(case) %>% 
+  filter(day == min(day)) %>% 
+  select(case, day) %>% 
+  mutate(event = 1) %>% 
+  ungroup() %>% 
+  distinct()
+
+censor_time <- discordant_data %>% 
+  filter(antigen != "Positive") %>%
+  group_by(case) %>% 
+  filter(day == max(day)) %>% 
+  select(case, censor_day = day) %>% 
+  ungroup() %>% 
+  distinct()
+
+concordant_tte <- discordant_data %>% 
+  select(case) %>% 
+  distinct() %>% 
+  left_join(tte, by = "case") %>% 
+  mutate(event = replace(event, is.na(event), 0)) %>% 
+  left_join(censor_time, by = "case") %>% 
+  mutate(tte = ifelse(event == 1, day, censor_day))
+```
+
+**Figure 1B.** Kaplan Meier Analysis of Time from PCR positive to Antigen Positive
+```{r}
+ggsurvplot(
+    fit = survfit(Surv(tte, event) ~ 1, data = concordant_tte), 
+    xlab = "Days from First PCR Positive Test", 
+    ylab = "False-Negative Rapid Covid Ag (%)",
+    conf.int = FALSE,
+    legend = "none")
+```
+
+```{r}
+surv_fit(Surv(tte, event) ~ 1,
+               data = concordant_tte)
+```
+
+2022 INFECTIOUS ECONOMICS LLC
